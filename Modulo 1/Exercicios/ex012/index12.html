@@ -1,0 +1,34 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Vídeos com HTML5</title>
+</head>
+<body>
+    <h1>Inserindo vídeos hospedados localmente</h1>
+    <p>Este vídeo está hospedado no meu próprio servidor.</p>
+    <hr>
+    <p>Forma mais simples</p>
+    <video src="midia/video-mp4.mp4" width="500" controls></video>
+
+    <p>De forma difícil, porém completo</p> <!--consome mais trafego e mais dados caso rode um formato mais pesado(caso o navegador do usuario n rode mp4)-->
+    <video width="500" poster="imagens/wallpaper-700.png" controls autoplay loop>
+        <source src="midia/video-mp4.mp4" type="video/mp4">
+        <source src="midia/video-m4v.m4v" type="midia/m4av">
+        <source src="midia/video-ogv.ogv" type="midia/ogv">
+        <source src="midia/video-webm.webm" type="midia/webm">
+        <p>Seu navegador não é compatível com o vídeo. Para acessá-lo <a href="midia/video-mp4.mp4" target="_blank" rel="next" download="midia/video-mp4" type="video/mp4">clique aqui</a>.</p>
+    </video>
+
+    <hr>
+
+    <h1>Inserindo videos hospedado externamente</h1><!--formato m4v é o mais recomendado-->
+    <h2>Pelo Youtube</h2>
+    <iframe width="560" height="315" src="https://www.youtube.com/embed/Lq6LAUzRnCo?si=nVyUP5uOY-acpDnz" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture; web-share" allowfullscreen></iframe>
+
+    <h2>Pelo Vimeo</h2> <!--ele tem um resultado mais satisfatorio, e é mais seguro contra roubo de conteúdo-->
+    <iframe src="https://player.vimeo.com/video/628542209?h=db0a5b24fe&loop=1&color=ff0179" width="560" height="560" frameborder="0" allow="autoplay; fullscreen; picture-in-picture" allowfullscreen></iframe></p>
+</body>
+</html>

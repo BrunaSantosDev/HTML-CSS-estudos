@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="shortcut icon" href="favicon.ico" type="image/x-icon">
+    <title>Mídias em HTML5</title>
+</head>
+<body>
+    <h1>Imagem dinâmica</h1>
+    <hr>
+    <p>Tente abrir esse site em vários dispositivos diferentes ou simplesmente aumente e diminua o tamanho do seu navegador.</p>
+    <picture> <!--Usar para colocar imagens maiores ou menores no site, ele faz a transição entre telas maiores e menores. Tem q obedecer a hierarquia de tamanhos, do menor para o maior-->
+        <source media="(max-width: 750px)" srcset="imagens/foto-p.png" type="image/png">
+        <source media="(max-width: 1000px)" srcset="imagens/foto-m.png" type="image/png">
+        <img src="imagens/foto-g.png" alt="imagem flexível">
+    </picture>
+
+    <h1>Reproduzindo Aúdio</h1>
+    <p>Vamos aprender a reproduzir áudios em HTML5</p>
+    <p>Esse é o jeito mais fácil com &ltaudio&gt:</p>
+    <audio src="midia/audio.mp3" controls autoplay></audio> <!--Essa forma é a mais simples, porém nem todos os navegadores aceitam MP3. Existem 3 tipos de audio: MP3, WAV e OGG-->
+    <p>Forma mais dificil porém compatível com &ltaudio&gt &ltsource&gt: </p>
+    <audio preload="metadata" autoplay controls loop><!--O Preload possui 3 coisos: auto-só libera o carregamento do site qnd o audio carregar junto(o pior pq dx pesado) | Metadata-Só carrega o nome do arquivo e informações | None-só carrega qnd o usuário dá play--> <!--desta forma ele vai reproduzir o compativel com o navegador, se não houver formato compátivel ele emitirá a mensagem final.-->
+        <source src="midia/audio.mp3" type="audio/mpeg">
+        <source src="midia/audio.ogg" type="audio/ogg">
+        <source src="midia/audio.wav" type="audio/wav"> <!--o pior e mais pesado, não use!-->
+        <p>Infelizmente seu navegador não é compatível com a reprodução de audio. <a href="midia/audio.mp3" target="_blank">Clique aqui para baixar o arquivo MP3</a></p>
+    </audio>
+</body>
+</html>
